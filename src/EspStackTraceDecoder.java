@@ -94,7 +94,16 @@ public class EspStackTraceDecoder  {
 		esp.tool = new File(args[0]);
 		String content = "";
 		if (args.length > 2) {
-			content = new String(Files.readAllBytes(Paths.get(args[2])));
+            String elfPathArg = args[2];
+            java.nio.file.Path elf = Paths.get(elfPathArg);
+            try {
+                File elfFile = new File(elfPathArg);
+                if (elfFile.canRead()) {
+            content = new String(Files.readAllBytes(elf));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 		} else {
 			String line = null;
 			while ((line = System.console().readLine()) != null) {

@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - EspStackTraceDecoder",
+            "request": "launch",
+            "mainClass": "EspStackTraceDecoder",
+            "args": "/Users/chris/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-addr2line /Users/chris/Projects/WillowBrew/Firmware/.pioenvs/esp8266thing/firmware.elf /Users/chris/Projects/WillowBrew/Firmware/trace1.txt",
+            "projectName": "EspStackTraceDecoder_7af4298c"
+        }
+    ]
+}
